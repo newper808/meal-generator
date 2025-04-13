@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainless Meal Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Brainless Meal Builder</h1>
+
+  <section>
+    <button class="accordion">1. Choose Protein + Flavor</button>
+    <div class="panel">
+      <strong>Tofu</strong><br>
+      <label><input type="checkbox" data-protein="Tofu" data-flavor="Taco Spice" data-desc="Wraps, bowls"> Taco Spice</label><br>
+      <label><input type="checkbox" data-protein="Tofu" data-flavor="Italian" data-desc="Pasta, grain bowls"> Italian</label><br>
+      <label><input type="checkbox" data-protein="Tofu" data-flavor="BBQ" data-desc="Sandwiches, roasted veg"> BBQ</label><br>
+      <label><input type="checkbox" data-protein="Tofu" data-flavor="Lemon Herb" data-desc="Salads, bowls"> Lemon Herb</label><br><br>
+
+      <strong>Beans</strong><br>
+      <label><input type="checkbox" data-protein="Beans" data-flavor="Taco Spice" data-desc="Bowls, quesadillas"> Taco Spice</label><br>
+      <label><input type="checkbox" data-protein="Beans" data-flavor="Italian" data-desc="Pasta or toast"> Italian</label><br>
+      <label><input type="checkbox" data-protein="Beans" data-flavor="Mustard Vinaigrette" data-desc="Cold salad"> Mustard Vinaigrette</label><br><br>
+
+      <strong>Edamame</strong><br>
+      <label><input type="checkbox" data-protein="Edamame" data-flavor="Soy-Garlic" data-desc="Stir fry, grain bowls"> Soy-Garlic</label><br>
+      <label><input type="checkbox" data-protein="Edamame" data-flavor="Lemon Herb" data-desc="Salads"> Lemon Herb</label><br><br>
+
+      <strong>Eggs</strong><br>
+      <label><input type="checkbox" data-protein="Eggs" data-flavor="Herbs/Spices" data-desc="Wraps, bowls, toast"> Herbs/Spices</label><br><br>
+
+      <strong>Cottage Cheese</strong><br>
+      <label><input type="checkbox" data-protein="Cottage Cheese" data-flavor="Savory Herbs" data-desc="Bowls, side snack"> Savory Herbs</label><br>
+      <label><input type="checkbox" data-protein="Cottage Cheese" data-flavor="Fruit Toppings" data-desc="Breakfast/snack"> Fruit Toppings</label><br><br>
+
+      <strong>Salmon (frozen or canned)</strong><br>
+      <label><input type="checkbox" data-protein="Salmon" data-flavor="Lemon Herb" data-desc="Grain bowls, salads, toast"> Lemon Herb</label><br>
+      <label><input type="checkbox" data-protein="Salmon" data-flavor="Cajun or Taco" data-desc="Wraps, tacos, over rice"> Cajun or Taco</label><br>
+      <label><input type="checkbox" data-protein="Salmon" data-flavor="Mustard/Yogurt/Hot Sauce" data-desc="Sandwiches, mash into bowls"> Mustard/Yogurt/Hot Sauce</label>
+    </div>
+
+    <button class="accordion">2. Choose Veggies</button>
+    <div class="panel">
+      <label><input type="checkbox" data-group="veggies" value="Broccoli"> Broccoli</label><br>
+      <label><input type="checkbox" data-group="veggies" value="Peppers"> Peppers</label><br>
+      <label><input type="checkbox" data-group="veggies" value="Sweet Potatoes"> Sweet Potatoes</label><br>
+      <label><input type="checkbox" data-group="veggies" value="Leafy Greens"> Leafy Greens</label><br>
+      <label><input type="checkbox" data-group="veggies" value="Carrots"> Carrots</label><br>
+      <label><input type="checkbox" data-group="veggies" value="Green Beans"> Green Beans</label>
+    </div>
+
+    <button class="accordion">3. Choose Grains / Forms</button>
+    <div class="panel">
+      <label><input type="checkbox" data-group="grains" value="Brown Rice"> Brown Rice</label><br>
+      <label><input type="checkbox" data-group="grains" value="Quinoa"> Quinoa</label><br>
+      <label><input type="checkbox" data-group="grains" value="Tortillas"> Tortillas</label><br>
+      <label><input type="checkbox" data-group="grains" value="Whole Grain Toast"> Whole Grain Toast</label><br>
+      <label><input type="checkbox" data-group="grains" value="Pasta"> Pasta</label><br>
+      <label><input type="checkbox" data-group="grains" value="Salad"> Salad</label>
+    </div>
+
+    <button class="accordion">4. Choose Toppings / Sauces</button>
+    <div class="panel">
+      <strong>Selected Base Choices:</strong>
+      <pre id="previewOutput"></pre>
+
+      <strong>Creamy</strong><br>
+      <label><input type="checkbox" data-group="toppings" value="Yogurt Lime Dressing"> Yogurt Lime Dressing</label><br>
+      <label><input type="checkbox" data-group="toppings" value="Tahini"> Tahini</label><br>
+      <label><input type="checkbox" data-group="toppings" value="Low-fat Mayo"> Low-fat Mayo</label><br><br>
+
+      <strong>Spicy</strong><br>
+      <label><input type="checkbox" data-group="toppings" value="Hot Sauce"> Hot Sauce</label><br>
+      <label><input type="checkbox" data-group="toppings" value="Chili Flakes"> Chili Flakes</label><br>
+
+      <strong>Sour</strong><br>
+      <label><input type="checkbox" data-group="toppings" value="Lime Juice"> Lime Juice</label><br>
+      <label><input type="checkbox" data-group="toppings" value="Pickled Onions"> Pickled Onions</label><br>
+
+      <strong>Umami</strong><br>
+      <label><input type="checkbox" data-group="toppings" value="Soy Sauce"> Soy Sauce</label><br>
+      <label><input type="checkbox" data-group="toppings" value="Pesto"> Pesto</label><br>
+      <label><input type="checkbox" data-group="toppings" value="Mustard"> Mustard</label><br><br>
+
+      <strong>Crunchy</strong><br>
+      <label><input type="checkbox" data-group="toppings" value="Nuts/Seeds"> Nuts/Seeds</label>
+    </div>
+
+    <div class="actions">
+      <button onclick="generatePlan()">Generate List</button>
+    </div>
+
+    <h2>Grocery List:</h2>
+    <pre id="groceryListOutput"></pre>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
